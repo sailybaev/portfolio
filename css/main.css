@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+nav, .links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+}
+
+.links {
+    gap: 40px;
+    list-style: none;
+    font-size: 25px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: grey;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+section {
+    padding-top: 50px;
+    height: 1000px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    height: 600px;
+    margin: 0;
+}
+
+.suret {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.text {
+    margin: auto 0;
+    align-self: center;
+    text-align: center;
+}
+
+.text p {
+    font-weight: 600;
+}
+
+.text-p1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.text-p2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.icon {
+    height: 40px;
+}
+
+.knopki {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    font-weight: 600;
+    padding: 20px;
+    width: 130px;
+    border-radius: 30px;
+    border: rgb(53, 53, 53) 2px solid;
+}
+
+.btn:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+
+
