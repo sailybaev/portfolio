@@ -114,25 +114,26 @@
 
     
 
-    <section id="tools" class="d-flex justify-content-center align-items-center flex-column gap-3 mb-5 text-center">
+    
+
+    <section id="tools" class="text-center">
       <h2>Select a Tool</h2>
       <select id="tool-select">
         <option value="todo">ToDo List</option>
         <option value="sorter">Number Sorter</option>
         <option value="calc">Calculator</option>
+        <option value="tax">Tax Calculator</option>
       </select>
     
       <div id="todo" class="tool-section">
-        <h2>todo list</h2>
-        <section id="todo-list" class="d-flex justify-content-center align-items-center flex-column gap-2 mb-5">          
-          <input type="text" id="task-input" placeholder="Add a task">
-          <button id="add-task-btn">Add Task</button>
-          <ul id="task-list"></ul>
-        </section>
+        <h2>ToDo List</h2>
+        <input type="text" id="todo-input" placeholder="Enter a task">
+        <button id="add-task-btn">Add Task</button>
+        <ul id="todo-list"></ul>
       </div>
     
       <div id="sorter" class="tool-section" style="display:none;">
-        <h2>Sorter</h2>
+        <h2>Number Sorter</h2>
         <section id="sorting-tool" class="d-flex justify-content-center align-items-center flex-column gap-2 mb-5">
           <input type="text" id="number-input" placeholder="Enter numbers separated by commas">
           <button id="sort-asc">Sort Ascending</button>
@@ -152,6 +153,13 @@
           <button id="divide-btn">/</button>
         </div>
         <p id="calc-result"></p>
+      </div>
+    
+      <div id="tax" class="tool-section" style="display:none;">
+        <h2>Tax Calculator</h2>
+        <input type="number" id="car-price" placeholder="Enter car price">
+        <button id="calculate-tax-btn">Calculate Tax</button>
+        <p id="tax-result"></p>
       </div>
     </section>
  

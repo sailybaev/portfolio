@@ -1,23 +1,29 @@
-document.getElementById("add-task-btn").addEventListener("click", function() {
-    const input = document.getElementById("task-input").value;
-    if (!input) {
-      alert("You must type something");
-      return;
-    }
+document.getElementById('add-task-btn').addEventListener('click', function() {
+  const taskInput = document.getElementById('todo-input');
+  const taskText = taskInput.value.trim();
 
-    const li = document.createElement("li");
-    li.textContent = input;
+  if (taskText === '') {
+    alert('You must type something');
+    return;
+  }
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.addEventListener("click", function() {
-      li.remove();
-    });
+  const taskItem = document.createElement('li');
+  taskItem.innerText = taskText;
 
-    li.appendChild(deleteBtn);
-    document.getElementById("task-list").appendChild(li);
-    document.getElementById("task-input").value = ""; 
+  const deleteBtn = document.createElement('button');
+  deleteBtn.innerText = 'Delete';
+  deleteBtn.addEventListener('click', function() {
+    taskItem.remove();
   });
+  taskItem.appendChild(deleteBtn);
+
+  taskItem.addEventListener('click', function() {
+    taskItem.classList.toggle('completed');
+  });
+
+  document.getElementById('todo-list').appendChild(taskItem);
+  taskInput.value = '';
+});
 
   function sortNumbers(order) {
     const input = document.getElementById("number-input").value;
@@ -137,3 +143,18 @@ document.getElementById('tool-select').addEventListener('change', function() {
     this.src = newSrc;
   });
   
+
+  document.getElementById('calculate-tax-btn').addEventListener('click', function() {
+    const carPrice = parseFloat(document.getElementById('car-price').value);
+    let tax;
+
+    if (carPrice > 10000) {
+      tax = carPrice * 0.25;
+    } else if (carPrice >= 5000) {
+      tax = carPrice * 0.20;
+    } else {
+      tax = carPrice * 0.15;
+    }
+
+    document.getElementById('tax-result').innerText = `Tax: $${tax.toFixed(2)}`;
+  });
