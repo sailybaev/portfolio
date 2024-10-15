@@ -14,7 +14,7 @@
       <div>
         <ul class="links">
           <li><a href="#hobby">Hobbies</a></li>
-          <li><a href="#contactme">Contact</a></li>
+          <li><button id="btn-contacts">Contactme</button></li>
         </ul>
       </div>
     </nav>
@@ -22,7 +22,7 @@
     <section id="profile">
 
       <div class="suret">
-        <img src="assets/alikhan3.jpeg" alt="Alikhan"/>
+        <img id="profile-photo" src="assets/alikhan3.jpeg" alt="Alikhan"/>
       </div>
 
       <div class="text">
@@ -111,6 +111,49 @@
         
         
     </section>
+
+    
+
+    <section id="tools" class="d-flex justify-content-center align-items-center flex-column gap-3 mb-5 text-center">
+      <h2>Select a Tool</h2>
+      <select id="tool-select">
+        <option value="todo">ToDo List</option>
+        <option value="sorter">Number Sorter</option>
+        <option value="calc">Calculator</option>
+      </select>
+    
+      <div id="todo" class="tool-section">
+        <h2>todo list</h2>
+        <section id="todo-list" class="d-flex justify-content-center align-items-center flex-column gap-2 mb-5">          
+          <input type="text" id="task-input" placeholder="Add a task">
+          <button id="add-task-btn">Add Task</button>
+          <ul id="task-list"></ul>
+        </section>
+      </div>
+    
+      <div id="sorter" class="tool-section" style="display:none;">
+        <h2>Sorter</h2>
+        <section id="sorting-tool" class="d-flex justify-content-center align-items-center flex-column gap-2 mb-5">
+          <input type="text" id="number-input" placeholder="Enter numbers separated by commas">
+          <button id="sort-asc">Sort Ascending</button>
+          <button id="sort-desc">Sort Descending</button>
+          <p id="sorted-numbers"></p>
+        </section>
+      </div>
+    
+      <div id="calc" class="tool-section" style="display:none;">
+        <h2>Calculator</h2>
+        <input type="number" id="calc-input1" placeholder="Enter first number">
+        <input type="number" id="calc-input2" placeholder="Enter second number">
+        <div>
+          <button id="add-btn">+</button>
+          <button id="subtract-btn">-</button>
+          <button id="multiply-btn">*</button>
+          <button id="divide-btn">/</button>
+        </div>
+        <p id="calc-result"></p>
+      </div>
+    </section>
  
     <section id="contactme" class="text-center">
 
@@ -131,6 +174,8 @@
 
     </section>
 
+    
+
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
@@ -143,10 +188,18 @@
         <li class="ms-3"><a class="text-body-secondary" href="#profile"> Home </a></li>
           <li class="ms-3"><a class="text-body-secondary" href="#hobby"> About </a></li>
           <li class="ms-3"><a class="text-body-secondary" href="#contactme"> Contactme </a></li>
-
-
       </ul>
     </footer>
+
+    <div id="contact-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Contact Me</h2>
+        <p>Email: sailybaevvv@gmail.com</p>
+        <p>Phone: +77474334661</p>
+      </div>
+    </div>
     
+    <script src="js/main.js"></script>
   </body>
 </html> 
